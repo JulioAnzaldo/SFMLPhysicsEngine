@@ -4,8 +4,8 @@
 
 #ifndef SFML_NEW_TEMPLATE_PHYSICSENGINE_H
 #define SFML_NEW_TEMPLATE_PHYSICSENGINE_H
-#include <SFML/Graphics.hpp>
 #include "Screen.h"
+#include "Particle.h"
 
 class PhysicsEngine {
 private:
@@ -13,7 +13,6 @@ private:
     std::map<ScreenStates, Screen> screens;
 
     //Objects that will be used in the main function
-    sf::RenderWindow window;
     sf::Text text[5];
     sf::Sprite sprite[3];
     Button button[5];

@@ -15,7 +15,11 @@ PhysicsEngine::~PhysicsEngine() {
 
 void PhysicsEngine::run()
 {
+    //This creates our project window
     sf::RenderWindow window(sf::VideoMode(2560, 1440), "Physics Engine Demo");
+    window.setFramerateLimit(240);
+
+    //Set the scale of our sprites to match the resolution of our screen
     sprite->setScale(5, 4.3);
 
     for(int i = 0; i < LASTSCREEN; i++)
@@ -24,8 +28,10 @@ void PhysicsEngine::run()
                                                         "OK", Fonts::getFont(AGENT), window.getSize()));
     }
 
+    //Initialize our screen system and set it to the first one
     ScreenStates screenStates = SCREEN1;
 
+    //Our programs big while loop that handles all systems
     while (window.isOpen())
     {
         sf::Event event;
@@ -39,9 +45,10 @@ void PhysicsEngine::run()
             std::map<ScreenStates, Screen>::iterator iter = screens.begin();
         }
 
-        //This clears the screen 60 times a second
+        //This clears the screen
         window.clear(sf::Color::Black);
 
+        //Handles operations based on current screen
         switch (screenStates) {
             case SCREEN1 : {
                 sprite[0].setTexture(Images::getImage(EQUATIONS));

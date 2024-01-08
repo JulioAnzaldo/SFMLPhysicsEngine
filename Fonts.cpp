@@ -12,7 +12,7 @@ std::string Fonts::getFontPath(FontNames fontNames)
     switch(fontNames)
     {
         case YAAHOWU : return "Fonts/Yaahowu.ttf";
-        case ARIAL : return "/Users/julioanzaldo/Coding Projects/Physics Engine/Fonts/Arial.ttf";
+        case ARIAL : return "Fonts/Arial.ttf";
         case AGENT : return "Fonts/Agent.ttf";
         case LASTFONT : break;
     }

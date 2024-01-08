@@ -4,7 +4,7 @@ project(SFML_NEW_TEMPLATE)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 set(SOURCE_FILES main.cpp PhysicsEngine.cpp PhysicsEngine.h Images.h Images.cpp Screen.h Screen.cpp
-       Button.h Button.cpp EnumNames.h States.h States.cpp Fonts.h Fonts.cpp)
+       Button.h Button.cpp EnumNames.h States.h States.cpp Fonts.h Fonts.cpp Particle.cpp Particle.h QuadTree.h Collisions.cpp Collisions.h QuadTree.cpp Gravity.cpp Gravity.h)
 add_executable(SFML_NEW_TEMPLATE ${SOURCE_FILES})
 include_directories(/usr/local/include)
 
