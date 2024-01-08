@@ -8,7 +8,6 @@ Particle::Particle() {
     particle.setFillColor({0, 0, 90});
     particle.setRadius(radius);
     particle.setPosition(0, 0);
-    particle.
 }
 
 Particle::~Particle() {
@@ -25,7 +24,7 @@ void Particle::updateParticle() {
 
 }
 
-const sf::Vector2f Particle::getPos() {
+sf::Vector2f Particle::getPos() {
     return pos;
 }
 
@@ -59,6 +58,10 @@ sf::Vector2f Particle::setNextPos(const sf::Vector2f &v) {
 
 sf::Vector2f Particle::setNextVel(const sf::Vector2f &v) {
     nextVel = v;
+}
+
+void Particle::operator+=(sf::Vector2f &p) {
+    pos += p;
 }
 
 void Particle::draw(sf::RenderTarget &target, sf::RenderStates states) const {

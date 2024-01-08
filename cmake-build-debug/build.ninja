@@ -149,6 +149,13 @@ build CMakeFiles/SFML_NEW_TEMPLATE.dir/Gravity.cpp.o: CXX_COMPILER__SFML_NEW_TEM
   OBJECT_DIR = CMakeFiles/SFML_NEW_TEMPLATE.dir
   OBJECT_FILE_DIR = CMakeFiles/SFML_NEW_TEMPLATE.dir
 
+build CMakeFiles/SFML_NEW_TEMPLATE.dir/HelperFunctions.cpp.o: CXX_COMPILER__SFML_NEW_TEMPLATE_Debug /Users/julioanzaldo/Coding$ Projects/Physics$ Engine/HelperFunctions.cpp || cmake_object_order_depends_target_SFML_NEW_TEMPLATE
+  DEP_FILE = CMakeFiles/SFML_NEW_TEMPLATE.dir/HelperFunctions.cpp.o.d
+  FLAGS = -std=c++11 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+  INCLUDES = -I/usr/local/include -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/SFML_NEW_TEMPLATE.dir
+  OBJECT_FILE_DIR = CMakeFiles/SFML_NEW_TEMPLATE.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target SFML_NEW_TEMPLATE
@@ -157,7 +164,7 @@ build CMakeFiles/SFML_NEW_TEMPLATE.dir/Gravity.cpp.o: CXX_COMPILER__SFML_NEW_TEM
 #############################################
 # Link the executable SFML_NEW_TEMPLATE
 
-build SFML_NEW_TEMPLATE: CXX_EXECUTABLE_LINKER__SFML_NEW_TEMPLATE_Debug CMakeFiles/SFML_NEW_TEMPLATE.dir/main.cpp.o CMakeFiles/SFML_NEW_TEMPLATE.dir/PhysicsEngine.cpp.o CMakeFiles/SFML_NEW_TEMPLATE.dir/Images.cpp.o CMakeFiles/SFML_NEW_TEMPLATE.dir/Screen.cpp.o CMakeFiles/SFML_NEW_TEMPLATE.dir/Button.cpp.o CMakeFiles/SFML_NEW_TEMPLATE.dir/States.cpp.o CMakeFiles/SFML_NEW_TEMPLATE.dir/Fonts.cpp.o CMakeFiles/SFML_NEW_TEMPLATE.dir/Particle.cpp.o CMakeFiles/SFML_NEW_TEMPLATE.dir/Collisions.cpp.o CMakeFiles/SFML_NEW_TEMPLATE.dir/QuadTree.cpp.o CMakeFiles/SFML_NEW_TEMPLATE.dir/Gravity.cpp.o | /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib /opt/homebrew/lib/libsfml-audio.2.5.1.dylib /opt/homebrew/lib/libsfml-network.2.5.1.dylib /opt/homebrew/lib/libsfml-window.2.5.1.dylib /opt/homebrew/lib/libsfml-system.2.5.1.dylib
+build SFML_NEW_TEMPLATE: CXX_EXECUTABLE_LINKER__SFML_NEW_TEMPLATE_Debug CMakeFiles/SFML_NEW_TEMPLATE.dir/main.cpp.o CMakeFiles/SFML_NEW_TEMPLATE.dir/PhysicsEngine.cpp.o CMakeFiles/SFML_NEW_TEMPLATE.dir/Images.cpp.o CMakeFiles/SFML_NEW_TEMPLATE.dir/Screen.cpp.o CMakeFiles/SFML_NEW_TEMPLATE.dir/Button.cpp.o CMakeFiles/SFML_NEW_TEMPLATE.dir/States.cpp.o CMakeFiles/SFML_NEW_TEMPLATE.dir/Fonts.cpp.o CMakeFiles/SFML_NEW_TEMPLATE.dir/Particle.cpp.o CMakeFiles/SFML_NEW_TEMPLATE.dir/Collisions.cpp.o CMakeFiles/SFML_NEW_TEMPLATE.dir/QuadTree.cpp.o CMakeFiles/SFML_NEW_TEMPLATE.dir/Gravity.cpp.o CMakeFiles/SFML_NEW_TEMPLATE.dir/HelperFunctions.cpp.o | /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib /opt/homebrew/lib/libsfml-audio.2.5.1.dylib /opt/homebrew/lib/libsfml-network.2.5.1.dylib /opt/homebrew/lib/libsfml-window.2.5.1.dylib /opt/homebrew/lib/libsfml-system.2.5.1.dylib
   FLAGS = -std=c++11 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
   LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/lib  /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib  /opt/homebrew/lib/libsfml-audio.2.5.1.dylib  /opt/homebrew/lib/libsfml-network.2.5.1.dylib  /opt/homebrew/lib/libsfml-window.2.5.1.dylib  /opt/homebrew/lib/libsfml-system.2.5.1.dylib
   OBJECT_DIR = CMakeFiles/SFML_NEW_TEMPLATE.dir

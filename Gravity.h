@@ -5,8 +5,9 @@
 #ifndef SFML_NEW_TEMPLATE_GRAVITY_H
 #define SFML_NEW_TEMPLATE_GRAVITY_H
 #include "QuadTree.h"
+#include "HelperFunctions.h"
 
-class Gravity {
+class Gravity : public HelperFunctions {
 public:
     std::vector<Particle> particles;
     QuadTree root;
@@ -35,8 +36,6 @@ public:
 
     //Helper functions
     sf::Vector2f gravityAcc(sf::Vector2f a, sf::Vector2f b, float m_b);
-    sf::Vector2f sub(sf::Vector2f a, sf::Vector2f b);
-    sf::Vector2f mult(sf::Vector2f v, float scalar);
 };
 
 

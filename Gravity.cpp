@@ -96,15 +96,7 @@ float Gravity::distSquared(sf::Vector2f a, sf::Vector2f b) {
 sf::Vector2f Gravity::gravityAcc(sf::Vector2f a, sf::Vector2f b, float m_b) {
     float dSq = distSquared(a, b);
     if (dSq <= 4 * radius * radius) {
-        return sf::Vector2f(0, 0);
+        return {0, 0};
     }
     return mult(sub(a, b), dt * G * m_b / (dSq * sqrt(dSq)));
-}
-
-sf::Vector2f Gravity::sub(sf::Vector2f a, sf::Vector2f b) {
-    return sf::Vector2f(a.x - b.x, a.y - b.y);
-}
-
-sf::Vector2f Gravity::mult(sf::Vector2f v, float scalar) {
-    return sf::Vector2f(v.x * scalar, v.y * scalar);
 }

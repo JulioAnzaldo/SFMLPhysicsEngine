@@ -25,16 +25,22 @@ void PhysicsEngine::run()
     for(int i = 0; i < LASTSCREEN; i++)
     {
         screens[static_cast<ScreenStates>(i)] = (Screen(EQUATIONS,"Screen" + std::to_string(i + 1),
-                                                        "OK", Fonts::getFont(AGENT), window.getSize()));
+                                                        "OK", Fonts::getFont(ARIAL), window.getSize()));
     }
 
     //Initialize our screen system and set it to the first one
     ScreenStates screenStates = SCREEN1;
 
+    //Set fonts for our all text objects
+    for(auto & i : text)
+        i.setFont(Fonts::getFont(ARIAL));
+
     //Our programs big while loop that handles all systems
     while (window.isOpen())
     {
         sf::Event event;
+
+        button->eventHandler(window, event);
 
         while (window.pollEvent(event))
         {
@@ -43,6 +49,20 @@ void PhysicsEngine::run()
 
             //Iterator for the screens
             std::map<ScreenStates, Screen>::iterator iter = screens.begin();
+
+            //Event handlers for our sceens
+            switch (screenStates) {
+                case SCREEN1 : {
+
+                }
+                case SCREEN2 : {
+
+                }
+                case SCREEN3 : {
+
+                }
+                case LASTSCREEN : break;
+            }
         }
 
         //This clears the screen

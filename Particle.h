@@ -27,7 +27,7 @@ public:
     void updateParticle();
 
     //Retrieve position and velocity
-    const sf::Vector2f getPos();
+    sf::Vector2f getPos();
     const sf::Vector2f getVel();
     const sf::Vector2f getNextPos();
     const sf::Vector2f getNextVel();
@@ -38,6 +38,8 @@ public:
     sf::Vector2f setVel(const sf::Vector2f& v);
     sf::Vector2f setNextPos(const sf::Vector2f& v);
     sf::Vector2f setNextVel(const sf::Vector2f &v);
+
+    void operator +=(sf::Vector2f& p);
 
     //Draw function
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;

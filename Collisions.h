@@ -6,7 +6,7 @@
 #define SFML_NEW_TEMPLATE_COLLISIONS_H
 #include "Gravity.h"
 
-class Collisions {
+class Collisions : public HelperFunctions {
 public:
 
     void collide(Particle& a, Particle& b, std::vector<Particle>& particles, float dist);

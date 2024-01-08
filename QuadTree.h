@@ -6,7 +6,7 @@
 #define SFML_NEW_TEMPLATE_QUADTREE_H
 #include "Particle.h"
 
-class QuadTree {
+class QuadTree : public sf::Drawable {
 public:
     std::vector<QuadTree> children; // Children objects
     Particle particle; //Particle object
@@ -19,14 +19,13 @@ public:
     int count; // Number of particles
 
     //Constructor & destructor
+    QuadTree();
     ~QuadTree();
     QuadTree(float x, float y, float w) : x(x), y(y), w(w), leaf(true), particle(), totalMass(0), count(0){
         totalCenter = sf::Vector2f(0, 0);
         center = sf::Vector2f(0, 0);
         children.resize(4);
     }
-
-    QuadTree();;
 
     // Return index of child that contains given vector
     int which(sf::Vector2f v);

@@ -67,7 +67,7 @@ void QuadTree::insert(Particle newParticle) {
             cur.children[qA].count++;
             cur.children[qB].count++;
 
-            particle.pos = sf::Vector2f(0, 0);
+            particle.getPos() = sf::Vector2f(0, 0);
             return;
         }
 
@@ -105,12 +105,7 @@ void QuadTree::draw(sf::RenderTarget &target) const {
             target.draw(rect);
         }
 
-        // Adjust as needed
-        sf::Font font;
-        font.loadFromFile("Arial.ttf");  // Load a suitable font
-
-
-        sf::Text text(std::to_string(count), font);
+        sf::Text text(std::to_string(count), Fonts::getFont(ARIAL));
         text.setCharacterSize(12);
         text.setPosition(x + w / 2, y + w / 2);
         text.setFillColor(sf::Color::White);

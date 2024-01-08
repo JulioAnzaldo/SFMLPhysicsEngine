@@ -7,16 +7,17 @@
 void Collisions::collide(Particle &a, Particle &b, std::vector<Particle>& particles, float dist) {
     if (dist > 2 * r) return;
 
-    Vector dPos = sub(a.pos, b.pos);
-    dPos.normalize();
+    sf::Vector2f dPos = sub(a.getPos(), b.getPos());
+    HelperFunctions::normailize(dPos);
 
     //Push-pull them apart
     float invHeatA = 1 / (a.getHeat() + 1);
     float invHeatB = 1 / (b.getHeat() + 1);
-    Vector mtd = mult(dPos, (2 * r - dist) * invHeatA / (invHeatA + invHeatB));
+
+    sf::Vector2f mtd = mult(dPos, (2 * r - dist) * invHeatA / (invHeatA + invHeatB));
     a.getNextPos().add(mtd);
 
-    float impactSpeed = dot(sub(a.getVel(), b.getVel()), dPos);
+    float impactSpeed = dotProduct(sub(a.getVel(), b.getVel()), dPos);
     a.getHeat() += abs(impactSpeed) * 0.1;
 
     // If already moving away from each other, return
