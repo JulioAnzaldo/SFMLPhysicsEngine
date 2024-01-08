@@ -46,8 +46,8 @@ void PhysicsEngine::run()
             case SCREEN1 : {
                 sprite[0].setTexture(Images::getImage(EQUATIONS));
 
-                button[0] = Button("Gravity Simulation", sf::Color(50, 50, 50, 20),
-                                   sf::Color::White, {300, 200});
+                button[0] = Button("Gravity Simulation", sf::Color(50, 50, 50, 100),
+                                   sf::Color::White, {200, 100});
 
                 for(const auto & i : sprite)
                     window.draw(i);
